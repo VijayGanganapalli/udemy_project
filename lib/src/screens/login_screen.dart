@@ -10,6 +10,8 @@ class LoginScreen extends StatelessWidget {
           children: <Widget>[
             emailField(),
             passwordField(),
+            Container(margin: EdgeInsets.only(top: 18.0)),
+            loginButton(),
           ],
         ),
       ),
@@ -27,6 +29,14 @@ class LoginScreen extends StatelessWidget {
     return TextField(
       obscureText: true,
       decoration: InputDecoration(labelText: "Password"),
+    );
+  }
+
+  Widget loginButton() {
+    return RaisedButton(
+      child: Text("Login"),
+      color: Colors.greenAccent,
+      onPressed: () {},
     );
   }
 }
