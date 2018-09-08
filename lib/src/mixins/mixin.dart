@@ -12,6 +12,12 @@ class MixinLoginScreen {
   );
 
   final validatePassword = StreamTransformer<String, String>.fromHandlers(
-    handleData: (password, sink) {},
+    handleData: (password, sink) {
+      if (password.length > 3) {
+        sink.add(password);
+      } else {
+        sink.addError("Password must be at least 4 characters");
+      }
+    },
   );
 }
