@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/login_screen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -6,6 +7,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Udemy Proect",
       theme: ThemeData(primarySwatch: Colors.green),
+      home: LoginScreen(),
     );
   }
 }
