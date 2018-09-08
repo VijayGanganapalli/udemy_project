@@ -18,5 +18,3 @@ class BlocLoginScreen extends MixinLoginScreen {
     _password.close();
   }
 }
-
-final bloc = BlocLoginScreen();
