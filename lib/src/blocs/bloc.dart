@@ -3,8 +3,8 @@ import '../mixins/mixin.dart';
 import 'package:rxdart/rxdart.dart';
 
 class BlocLoginScreen extends MixinLoginScreen {
-  final _email = StreamController<String>();
-  final _password = StreamController<String>();
+  final _email = StreamController<String>.broadcast();
+  final _password = StreamController<String>.broadcast();
 
   // add data to stream
   Stream<String> get email => _email.stream.transform(validateEmail);
